@@ -1,0 +1,27 @@
+{
+  "name": "eshan-trivedi",
+  "version": "1.0.0",
+  "description": "\"\"\u001b[my very own npm business card package",
+  "main": "./bin/biolinks.js",
+  "bin": {
+    "ph7biolinks": "./bin/biolinks.js"
+  },
+  "scripts": {
+    "start": "node ./bin/biolinks.js"
+  },
+  "keywords": [
+    "eshan-trivedi",
+    "eshan",
+    "trivedi",
+    "business",
+    "card",
+    "npx",
+    "npm"
+  ],
+  "author": "Eshan-Trivedi",
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "^7.0.0",
+    "chalk": "^5.0.1"
+  }
+}
