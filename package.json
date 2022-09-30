@@ -1,6 +1,6 @@
 {
   "name": "eshan-trivedi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "\"\"\u001b[my very own npm business card package",
   "main": "./bin/biolinks.js",
   "type": "module",
