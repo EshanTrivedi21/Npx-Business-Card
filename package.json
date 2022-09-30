@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "\"\"\u001b[my very own npm business card package",
   "main": "./bin/biolinks.js",
+  "type": "module",
   "bin": {
-    "ph7biolinks": "./bin/biolinks.js"
+    "eshan-trivedi": "./bin/biolinks.js"
   },
   "scripts": {
     "start": "node ./bin/biolinks.js"
@@ -22,6 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "boxen": "^7.0.0",
-    "chalk": "^5.0.1"
+    "chalk": "^5.0.1",
+    "node-fetch": "^3.2.10"
   }
 }

@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const chalk = require('chalk');
-const boxen = require('boxen');
+import chalk from 'chalk';
+import boxen from 'boxen';
 
-const fs = require('fs');
-const path = require('path');
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
 
 const options = {
     padding: 1,
@@ -14,8 +14,8 @@ const options = {
 };
 
 try {
-    const result = fs.readFileSync(path.resolve(__dirname, "../info.json"));
-    const userData = JSON.parse(res);
+    const result = readFileSync(resolve(__dirname, "../info.json"));
+    const userData = JSON.parse(result);
 
     const {
         first_name,
@@ -48,8 +48,8 @@ try {
         newline +
         `${styledData.labelLinkedin} ${styledData.linkedIn}`;
 
-        console.log(chalk.green.bold(boxen(output, options)));
+        console.log(chalk.bgGreen.bold(boxen(output, options)));
 
 }   catch (err) {
-    console.log(chalk.red.bold('Cannot read data.json file!'));
+    console.log(chalk.bgRed.bold('Cannot read data.json file!'));
 }
