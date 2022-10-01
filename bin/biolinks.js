@@ -21,30 +21,38 @@ try {
         first_name,
         last_name,
         current_status,
+        github,
+        linkedin
     } = userData;
 
     const styledData = {
-        firstName: chalk.blue.bold(first_name),
-        lastName: chalk.blue.bold(last_name),
-        currentStatus: chalk.blue.bold(current_status),
+        firstName: chalk.blueBright.bold(first_name),
+        lastName: chalk.blueBright.bold(last_name),
+        currentStatus: chalk.blueBright.bold(current_status),
+        gitHub: chalk.blueBright.bold(github),
+        linkedIn: chalk.blueBright.bold(linkedin)
     };
 
     const newline = "\n";
 
     const output =  
         `${styledData.firstName} ${styledData.lastName}` +
+        newline + newline +  newline +
+        `${styledData.currentStatus}` +
         newline + newline +
-        `${styledData.currentStatus}`;
+        `${styledData.gitHub}` +
+        newline +  newline +
+        `${styledData.linkedIn}`;
 
     const options = {
-        padding: 1,
-        margin: 1,
+        padding: 2.5,
+        margin: 3,
         textAlignment: 'center',
     };
 
-    console.log(chalk.bgGreen.bold(boxen(output, options)));
+    console.log(chalk.blueBright.bold(boxen(output, options)));
 
 }   catch (err) {
-    console.log(chalk.bgRed.bold(`Cannot read ${styledDataFilename} file!`));
-    console.log(chalk.bgRed.bold(err.message));
+    console.log(chalk.red.bold(`Cannot read ${styledDataFilename} file!`));
+    console.log(chalk.red.bold(err.message));
 }
